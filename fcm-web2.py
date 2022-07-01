@@ -53,7 +53,8 @@ def run():
             'Ukuran Rumah': int(uk_rumah),
             'Harga Beli': int(hrg_beli)}
     fitur = pd.DataFrame(data, index=[0])
-    st.write(fitur)
+    fitur_transpose = fitur.T
+    st.write(fitur_transpose)
 
     st.subheader('Hasil Clustering Rumah dengan Fuzzy C Means')
     if st.button("Submit"):
